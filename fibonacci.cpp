@@ -21,6 +21,6 @@ int main()
 		a = x + y;		//Actual is  x + y
 	}
 
-	system("PAUSE");		//DONT CLOSE CONSOLE AT THE END (WINDOWS)
+	system( "PAUSE" );		//DONT CLOSE CONSOLE AT THE END (WINDOWS)
 	return 0;
 }
