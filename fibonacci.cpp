@@ -1,27 +1,26 @@
-#include <stdio.h>
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 int main()
 {
-	string result = "";
-	unsigned long x = 0;
-	unsigned long y = 0;
-	unsigned long a = 1;
-	int total = 47;
+	int total = 50;			//TOTAL FIBONACCI NUMBERS, CHANGE IT TO MORE OR LESS
 
-	for(int z = 0; z < total; z++)
+	//LONG LONG gives a max of 2^64
+	unsigned long long x = 0;	//LVAL1
+	unsigned long long y = 0;	//LVAL2
+	unsigned long long a = 1;	//Actual value
+
+	
+
+	for (int z = 0; z < total; z++)
 	{
-		result += to_string(a);
-		cout << a << endl;
-		result += "\r\n";
-		x = y;
-		y = a;
-		a = x + y;
+		cout << a << endl;	//SHOWS ACTUAL NUMBER (a)
+		x = y;				//SHIFTS X to Y Value
+		y = a;				//SHIFTS Y to Actual value
+		a = x + y;			//Actual is  x + y
 	}
-	//cout << result << endl;
-	system("PAUSE");
-    return 0;
+
+	system("PAUSE");		//DONT CLOSE CONSOLE AT THE END (WINDOWS)
+	return 0;
 }
