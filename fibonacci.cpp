@@ -13,12 +13,12 @@ int main()
 
 	
 
-	for (int z = 0; z < total; z++)
+	for (  int z = 0; z < total; z++ )
 	{
 		cout << a << endl;	//SHOWS ACTUAL NUMBER (a)
-		x = y;				//SHIFTS X to Y Value
-		y = a;				//SHIFTS Y to Actual value
-		a = x + y;			//Actual is  x + y
+		x = y;			//SHIFTS X to Y Value
+		y = a;			//SHIFTS Y to Actual value
+		a = x + y;		//Actual is  x + y
 	}
 
 	system("PAUSE");		//DONT CLOSE CONSOLE AT THE END (WINDOWS)
