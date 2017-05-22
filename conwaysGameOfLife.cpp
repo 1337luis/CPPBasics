@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <Windows.h>
 #include <cstdlib>
 
@@ -9,7 +9,8 @@ void	display();
 void	clear();
 void	setup();
 
-int		pad[16][16] = { 0 };
+const int	padSize = 16;
+int		pad[padSize][padSize] = { 0 };
 
 int main() {
 	setup();
@@ -20,13 +21,13 @@ int main() {
 		Sleep(500);
 		clear();
 	}
-	
+
 }
 void refresh() {
 
-	for (int x = 0; x < 16; x++) {
-		for (int y = 0; y < 16; y++) {
-			int neighbors = pad[x-1][y-1] + pad[x][y-1] + pad[x+1][y-1] + pad[x-1][y] + pad[x+1][y] + pad[x-1][y+1] + pad[x][y+1] + pad[x+1][y+1];
+	for (int x = 0; x < padSize; x++) {
+		for (int y = 0; y < padSize; y++) {
+			int neighbors = pad[x - 1][y - 1] + pad[x][y - 1] + pad[x + 1][y - 1] + pad[x - 1][y] + pad[x + 1][y] + pad[x - 1][y + 1] + pad[x][y + 1] + pad[x + 1][y + 1];
 
 			if (pad[x][y] == 1) {
 				if (neighbors <= 1) {
@@ -55,8 +56,8 @@ void refresh() {
 }
 void display() {
 
-	for (int x = 0; x < 16; x++) {
-		for (int y = 0; y < 16; y++) {
+	for (int x = 0; x < padSize; x++) {
+		for (int y = 0; y < padSize; y++) {
 			if (pad[x][y] == 1) {
 				cout << (char)254u << " ";
 			}
@@ -73,8 +74,8 @@ void clear() {
 	system("cls");
 }
 void setup() {
-	for (int x = 0; x < 16; x++) {
-		for (int y = 0; y < 16; y++) {
+	for (int x = 0; x < padSize; x++) {
+		for (int y = 0; y < padSize; y++) {
 			int r = rand() % 100;
 			if (r < 49) {
 				pad[x][y] = 1;
