@@ -69,7 +69,6 @@ void display() {
 
 }
 
-//STACKOVERFLOW METHOD TO CLEAR SCREEN WITHOUT CLS
 void clear() {
 	system("cls");
 }
