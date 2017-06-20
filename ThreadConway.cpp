@@ -11,7 +11,7 @@ void	clear();
 void	setup();
 
 const int	padSize = 16;
-int		    pad[ padSize ][ padSize ] = { 0 };
+int		   pad[ padSize ][ padSize ] = { 0 };
 
 int main() {
     setup();
